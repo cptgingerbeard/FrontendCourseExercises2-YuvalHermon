@@ -1,0 +1,47 @@
+<div class="destinations-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Destination Management</mat-card-title>
+      </mat-card-header>
+      
+      <mat-form-field>
+        <mat-label>Filter Destinations</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. New York" #input>
+      </mat-form-field>
+  
+      <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+        <!-- Destination Name Column -->
+        <ng-container matColumnDef="destinationName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Destination Name</th>
+          <td mat-cell *matCellDef="let element">{{element.destinationName}}</td>
+        </ng-container>
+  
+        <!-- Destination Code Column -->
+        <ng-container matColumnDef="destinationCode">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Destination Code</th>
+          <td mat-cell *matCellDef="let element">{{element.destinationCode}}</td>
+        </ng-container>
+  
+        <!-- Airport Name Column -->
+        <ng-container matColumnDef="airportName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Airport Name</th>
+          <td mat-cell *matCellDef="let element">{{element.airportName}}</td>
+        </ng-container>
+  
+        <!-- Actions Column -->
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef>Actions</th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-icon-button color="primary" (click)="viewDestinationDetails(element)">
+              <mat-icon>visibility</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+  
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of destinations"></mat-paginator>
+    </mat-card>
+  </div>
