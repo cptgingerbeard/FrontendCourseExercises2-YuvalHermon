@@ -1,0 +1,45 @@
+.header {
+    background-color: #2c3e50; /* צבע כהה יותר ונעים לעין */
+    color: #ecf0f1; /* צבע לבן עם גוון רך */
+    font-family: 'Roboto', sans-serif; /* גופן מודרני ונקי */
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center; /* מיושרים למרכז אנכית */
+    justify-content: space-between; /* מרווח שווה בין האלמנטים */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%; /* עיגול ללוגו */
+    margin-right: 10px;
+}
+
+.header .title {
+    font-size: 24px;
+    color: #1abc9c; /* צבע בולט לכותרת */
+}
+
+.header nav {
+    display: flex;
+    gap: 15px;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #1abc9c; /* צבע הדגשה לקישורים */
+}
