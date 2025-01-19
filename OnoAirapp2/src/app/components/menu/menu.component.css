@@ -1,0 +1,24 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+mat-nav-list {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-list-item {
+  font-size: 16px;
+}
+
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
